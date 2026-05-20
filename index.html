@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rosu Studio — Mockup</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --green: #1D9E75;
+    --green-light: #E8F5F0;
+    --green-mid: #4CAF8A;
+    --dark: #0F1A16;
+    --text: #1A2E28;
+    --text-light: #6B7C75;
+    --white: #FFFFFF;
+    --bg: #F8FFFE;
+    --card-bg: #FFFFFF;
+    --border: rgba(29, 158, 117, 0.15);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 16px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(248, 255, 254, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600 !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 50%, rgba(29,158,117,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(29,158,117,0.05) 0%, transparent 60%);
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+  }
+
+  .hero-text { flex: 1; }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid rgba(29,158,117,0.2);
+  }
+
+  .hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .hero-title span {
+    color: var(--green);
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(29,158,117,0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(29,158,117,0.4);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: var(--text);
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+  }
+
+  .btn-secondary:hover { transform: translateY(-2px); }
+
+  /* Hero phone mockup */
+  .hero-visual { flex: 0 0 320px; }
+
+  .phone-mockup {
+    width: 280px;
+    height: 560px;
+    background: #0F1A16;
+    border-radius: 40px;
+    border: 8px solid #1A2A24;
+    box-shadow:
+      0 40px 80px rgba(0,0,0,0.25),
+      0 0 0 1px rgba(255,255,255,0.05);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #F8FFFE;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phone-status {
+    padding: 12px 20px 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #666;
+    background: #F8FFFE;
+  }
+
+  .phone-header {
+    padding: 8px 16px 10px;
+    background: #F8FFFE;
+  }
+
+  .phone-greeting {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A2E28;
+  }
+
+  .phone-sub {
+    font-size: 10px;
+    color: #999;
+  }
+
+  .phone-level-card {
+    margin: 0 12px 10px;
+    background: #F0F9F5;
+    border-radius: 12px;
+    padding: 10px 12px;
+    border: 1px solid rgba(29,158,117,0.2);
+  }
+
+  .phone-level-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1A2E28;
+    margin-bottom: 6px;
+  }
+
+  .phone-xp-bar {
+    height: 5px;
+    background: #E0E0E0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .phone-xp-fill {
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(90deg, #1D9E75, #4CAF8A);
+    border-radius: 3px;
+  }
+
+  .phone-habits {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .phone-habit {
+    background: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #F0F0F0;
+  }
+
+  .phone-habit.done {
+    border-color: rgba(29,158,117,0.2);
+    background: #F8FFFC;
+  }
+
+  .phone-habit-emoji {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #F0F9F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .phone-habit-info { flex: 1; }
+
+  .phone-habit-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1A2E28;
+  }
+
+  .phone-habit.done .phone-habit-name {
+    text-decoration: line-through;
+    color: #999;
+  }
+
+  .phone-habit-streak {
+    font-size: 9px;
+    color: #999;
+  }
+
+  .phone-check {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #DDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone-check.checked {
+    background: #1D9E75;
+    border-color: #1D9E75;
+    color: white;
+    font-size: 12px;
+  }
+
+  .phone-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 14px;
+    border-top: 1px solid #F0F0F0;
+    background: white;
+  }
+
+  .phone-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 8px;
+    color: #CCC;
+  }
+
+  .phone-nav-item.active { color: #1D9E75; }
+  .phone-nav-icon { font-size: 16px; }
+
+  /* ── STATS ── */
+  .stats-bar {
+    background: var(--green);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .stat-item { text-align: center; color: white; }
+  .stat-number { font-size: 36px; font-weight: 800; }
+  .stat-label { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+
+  /* ── APPS SECTION ── */
+  .section {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border: 1px solid rgba(29,158,117,0.2);
+  }
+
+  .section-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 48px;
+    max-width: 500px;
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  .app-card {
+    background: white;
+    border-radius: 24px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(29,158,117,0.12);
+  }
+
+  .app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .app-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .app-name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .app-category {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+
+  .app-description {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .app-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .app-tag {
+    background: var(--green-light);
+    color: var(--green);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .app-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .app-card.coming-soon {
+    background: #F8F8F8;
+    border-style: dashed;
+  }
+
+  .coming-soon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    gap: 12px;
+    color: var(--text-light);
+  }
+
+  .coming-soon-icon { font-size: 48px; opacity: 0.3; }
+  .coming-soon-text { font-size: 16px; font-weight: 600; }
+  .coming-soon-sub { font-size: 13px; text-align: center; }
+
+  /* ── FEATURES ── */
+  .features-section {
+    background: var(--dark);
+    padding: 80px 60px;
+    color: white;
+  }
+
+  .features-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .features-section .section-badge {
+    background: rgba(29,158,117,0.2);
+    border-color: rgba(29,158,117,0.3);
+  }
+
+  .features-section .section-title { color: white; }
+  .features-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .feature-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 24px;
+    transition: background 0.2s;
+  }
+
+  .feature-card:hover { background: rgba(29,158,117,0.1); }
+
+  .feature-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .feature-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .feature-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+
+  .footer-copy {
+    color: rgba(255,255,255,0.3);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🔥</div>
+    Rosu Studio
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Apps</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Legal</a></li>
+    <li><a href="#" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">🚀 Independent App Studio</div>
+      <h1 class="hero-title">
+        We build apps<br>people <span>love to use</span>
+      </h1>
+      <p class="hero-subtitle">
+        Rosu Studio creates simple, beautiful, and powerful mobile applications that help people build better habits and improve their daily lives.
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">📱 Our Apps</a>
+        <a href="#" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-status"><span>9:41</span><span>●●● 100%</span></div>
+          <div class="phone-header">
+            <div class="phone-greeting">Hello, Alex! 👋</div>
+            <div class="phone-sub">3 of 4 habits completed today</div>
+          </div>
+          <div class="phone-level-card">
+            <div class="phone-level-row">
+              <span>⚡ Level 7 — Gold</span>
+              <span>65 / 80 XP</span>
+            </div>
+            <div class="phone-xp-bar"><div class="phone-xp-fill"></div></div>
+          </div>
+          <div class="phone-habits">
+            <div class="phone-habit done">
+              <div class="phone-habit-emoji">🏃</div>
+              <div class="phone-habit-info">
+                <div class="phone-habit-name">Running — 30 min</div>
+                <div class="phone-habit-streak">🔥 12 day streak</div>
+              </div>
+              <div class="phone-check checked">✓</div>
+            </div>
+            <div class="phone-habit done">
+              <div class="phone-habit-emoji">📚</div>
+              <div class="phone-habit-info">
+                <div class="phone-habit-name">Reading — 20 min</div>
+                <div class="phone-habit-streak">🔥 5 day streak</div>
+              </div>
+              <div class="phone-check checked">✓</div>
+            </div>
+            <div class="phone-habit done">
+              <div class="phone-habit-emoji">💧</div>
+              <div class="phone-habit-info">
+                <div class="phone-habit-name">Drink 2L water</div>
+                <div class="phone-habit-streak">🔥 3 day streak</div>
+              </div>
+              <div class="phone-check checked">✓</div>
+            </div>
+            <div class="phone-habit">
+              <div class="phone-habit-emoji">🧘</div>
+              <div class="phone-habit-info">
+                <div class="phone-habit-name">Meditate — 10 min</div>
+                <div class="phone-habit-streak">Start today!</div>
+              </div>
+              <div class="phone-check"></div>
+            </div>
+          </div>
+          <div class="phone-nav">
+            <div class="phone-nav-item active"><span class="phone-nav-icon">🏠</span>Today</div>
+            <div class="phone-nav-item"><span class="phone-nav-icon">👤</span>Profile</div>
+            <div class="phone-nav-item"><span class="phone-nav-icon">➕</span>Add</div>
+            <div class="phone-nav-item"><span class="phone-nav-icon">👥</span>Social</div>
+            <div class="phone-nav-item"><span class="phone-nav-icon">🛍️</span>Shop</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-number">1+</div>
+    <div class="stat-label">Apps Published</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">100%</div>
+    <div class="stat-label">Free to Start</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">6</div>
+    <div class="stat-label">Habit Categories</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">∞</div>
+    <div class="stat-label">Streaks Possible</div>
+  </div>
+</div>
+
+<!-- APPS -->
+<div style="background: var(--bg); padding: 80px 0;">
+  <div class="section">
+    <div class="section-badge">📱 Our Apps</div>
+    <h2 class="section-title">Simple apps, real results</h2>
+    <p class="section-subtitle">We focus on doing one thing at a time — and doing it exceptionally well.</p>
+
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon">🔥</div>
+          <div>
+            <div class="app-name">StreakLife</div>
+            <div class="app-category">Habit Tracker RPG · Android</div>
+          </div>
+        </div>
+        <p class="app-description">
+          Build powerful daily habits through gamification. Track streaks, level up your avatar, earn Flames, and compete on the global leaderboard.
+        </p>
+        <div class="app-tags">
+          <span class="app-tag">Habit Tracker</span>
+          <span class="app-tag">RPG</span>
+          <span class="app-tag">Free</span>
+          <span class="app-tag">Android</span>
+        </div>
+        <a href="#" class="app-cta">▶ Get on Play Store</a>
+      </div>
+
+      <div class="app-card coming-soon">
+        <div class="coming-soon-content">
+          <div class="coming-soon-icon">🚀</div>
+          <div class="coming-soon-text">More apps coming soon</div>
+          <div class="coming-soon-sub">We're working on something exciting.<br>Stay tuned!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="features-section">
+  <div class="features-inner">
+    <div class="section-badge">✨ Why Rosu Studio</div>
+    <h2 class="section-title">Built with care</h2>
+    <p class="section-subtitle">Every app we build follows the same principles.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Fast & Lightweight</div>
+        <div class="feature-desc">Our apps are built with Flutter — smooth, native performance on any Android device.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title">Privacy First</div>
+        <div class="feature-desc">We collect only what's necessary. Your data is yours — always transparent about what we use.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <div class="feature-title">Free to Start</div>
+        <div class="feature-desc">All our apps are free to download and use. Premium features are optional, never required.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <div class="feature-title">Gamified Experience</div>
+        <div class="feature-desc">We believe productivity should be fun. Our apps use game mechanics to keep you motivated.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-title">Regular Updates</div>
+        <div class="feature-desc">We listen to our users and ship updates regularly with new features and improvements.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <div class="feature-title">Real Support</div>
+        <div class="feature-desc">Got a question or issue? We respond to every email personally — no bots, no templates.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="nav-logo-icon">🔥</div>
+    Rosu Studio
+  </div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Rosu Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

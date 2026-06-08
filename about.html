@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Rosu Studio</title>
+  <meta name="description" content="Rosu Studio is a one-person indie mobile studio based in Romania. We craft thoughtful, beautiful Android apps — starting with StreakLife.">
+  <link rel="canonical" href="https://rosustudio.net/about.html">
+  <meta property="og:title" content="About Rosu Studio">
+  <meta property="og:description" content="Indie mobile studio based in Romania, crafting thoughtful Android apps.">
+  <meta property="og:url" content="https://rosustudio.net/about.html">
+  <meta property="og:image" content="https://rosustudio.net/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .value-card {
+      padding: 28px;
+      border-radius: var(--r-lg);
+      background: var(--oat);
+      box-shadow: 8px 8px 20px var(--nm-dark), -8px -8px 20px var(--nm-light);
+      transition: transform 0.25s;
+    }
+
+    .value-card:hover { transform: translateY(-4px); }
+
+    .value-icon { font-size: 2rem; margin-bottom: 14px; }
+
+    .value-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .value-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 640px;
+      margin-inline: auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--caramel), var(--terracotta));
+      opacity: 0.3;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 28px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+
+    .timeline-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--caramel), var(--terracotta));
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(196,149,106,0.3);
+      z-index: 1;
+    }
+
+    .timeline-body { padding-top: 4px; }
+
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 6px;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .timeline-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--light" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#abLg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="abLg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+        Rosu Studio
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-toggle">Legal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
+          <ul class="nav__dropdown">
+            <li><a href="privacy-policy.html"><span class="dd-icon">🔒</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span class="dd-icon">📄</span> Terms of Service</a></li>
+            <li><a href="refund-policy.html"><span class="dd-icon">↩️</span> Refund Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta desktop-only" style="padding:10px 20px;font-size:0.85rem;">Get in Touch</a>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a><a href="apps.html">Apps</a><a href="about.html">About</a>
+      <span class="nav__mobile-dropdown-toggle">Legal ▾</span>
+      <div class="nav__mobile-dropdown-content" style="display:none;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Our Story</p>
+        <h1 class="display-lg" style="margin-top:10px; margin-bottom:16px;">Small studio.<br>Big intentions.</h1>
+        <p style="color:rgba(245,240,232,0.60); max-width:520px; margin-inline:auto; font-size:1.05rem;">
+          Rosu Studio is a one-person indie mobile studio based in Romania. We build apps that are beautiful, fast, and actually useful — one feature at a time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section section--dim">
+      <div class="container">
+        <div style="max-width:720px; margin-inline:auto; text-align:center;">
+          <p class="eyebrow reveal">Why we exist</p>
+          <h2 class="display-md reveal" style="margin-top:10px; margin-bottom:20px;">Apps should earn your attention.</h2>
+          <p class="reveal" style="color:var(--text-muted); font-size:1.05rem; line-height:1.75; margin-bottom:16px;">
+            Too many apps are cluttered, distracting, and hollow. We build the opposite: apps that are quiet, beautiful, and deeply useful. Every pixel earns its place.
+          </p>
+          <p class="reveal" style="color:var(--text-muted); font-size:1.05rem; line-height:1.75;">
+            Rosu Studio started with a personal frustration — no habit tracker felt <em>right</em>. Either they were too simple or gamified in a cheap way. StreakLife is our answer: a habit tracker that genuinely respects your time and intelligence, while making progress feel tangible and rewarding.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:56px;">
+          <p class="eyebrow reveal">Our principles</p>
+          <h2 class="display-md reveal" style="margin-top:10px;">How we build.</h2>
+          <div class="divider" style="margin-inline:auto; margin-top:20px;"></div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card reveal" data-delay="0">
+            <div class="value-icon">🎨</div>
+            <div class="value-title">Design first</div>
+            <p class="value-desc">Every screen is crafted before a line of code is written. We believe beautiful software works better.</p>
+          </div>
+          <div class="value-card reveal" data-delay="100">
+            <div class="value-icon">⚡</div>
+            <div class="value-title">Fast by default</div>
+            <p class="value-desc">Performance is a feature. We optimize relentlessly — every interaction should feel instant.</p>
+          </div>
+          <div class="value-card reveal" data-delay="200">
+            <div class="value-icon">🔒</div>
+            <div class="value-title">Privacy by design</div>
+            <p class="value-desc">We collect only what we need. No ads, no tracking, no selling of your data. Ever.</p>
+          </div>
+          <div class="value-card reveal" data-delay="0">
+            <div class="value-icon">💚</div>
+            <div class="value-title">Free to start</div>
+            <p class="value-desc">All our apps are free to download with no required subscriptions. Earn your way to premium content.</p>
+          </div>
+          <div class="value-card reveal" data-delay="100">
+            <div class="value-icon">🔧</div>
+            <div class="value-title">Continuous polish</div>
+            <p class="value-desc">We ship, then keep improving. Every update is a chance to make the app a little more right.</p>
+          </div>
+          <div class="value-card reveal" data-delay="200">
+            <div class="value-icon">💬</div>
+            <div class="value-title">User feedback</div>
+            <p class="value-desc">Our roadmap is driven by users, not assumptions. Talk to us — we genuinely listen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section--dark">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:64px;">
+          <p class="eyebrow eyebrow--dark reveal">History</p>
+          <h2 class="display-md reveal" style="color:#F5F0E8; margin-top:10px;">How we got here.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot">24</div>
+            <div class="timeline-body">
+              <div class="timeline-date">Late 2024</div>
+              <div class="timeline-title">The idea</div>
+              <p class="timeline-desc">Frustrated with existing habit trackers, started sketching what StreakLife could look like. A habit tracker that actually gamifies progress — no subscriptions, no fluff.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal" data-delay="100">
+            <div class="timeline-dot">25</div>
+            <div class="timeline-body">
+              <div class="timeline-date">Early 2025</div>
+              <div class="timeline-title">First build</div>
+              <p class="timeline-desc">Built the first version of StreakLife in Flutter. Core loop: habits → streaks → XP. Firebase backend, Google Sign-In, basic Neumorphic UI. Dogfooding it daily.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal" data-delay="200">
+            <div class="timeline-dot">↑</div>
+            <div class="timeline-body">
+              <div class="timeline-date">Mid 2025</div>
+              <div class="timeline-title">Avatar system</div>
+              <p class="timeline-desc">Added the layered avatar system — PNG layers for outfit, hair, accessories. Custom Python scripts to generate the assets. The Flames currency shop launched.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal" data-delay="300">
+            <div class="timeline-dot">🚀</div>
+            <div class="timeline-body">
+              <div class="timeline-date">2026</div>
+              <div class="timeline-title">Rosu Studio founded</div>
+              <p class="timeline-desc">StreakLife hits a polish milestone. Rosu Studio is formalized. Website launches. More apps in the pipeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dim">
+      <div class="container">
+        <div style="max-width:580px; margin-inline:auto; text-align:center;" class="reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2 class="display-md" style="margin-top:10px; margin-bottom:16px;">Have feedback? Ideas?</h2>
+          <p style="color:var(--text-muted); margin-bottom:32px; font-size:1rem;">
+            We read every message. Whether it's a bug report, a feature idea, or just a hello — reach out.
+          </p>
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn--primary">Contact Us →</a>
+            <a href="mailto:contact@rosustudio.net" class="btn btn--outline">Email Directly</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color:#F5F0E8;">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#abFlg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="abFlg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+            Rosu Studio
+          </a>
+          <p class="footer__tagline">Indie mobile studio crafting apps people actually love.</p>
+        </div>
+        <div><div class="footer__col-title">Apps</div><ul class="footer__links"><li><a href="streaklife.html">StreakLife</a></li><li><a href="apps.html">All Apps</a></li></ul></div>
+        <div><div class="footer__col-title">Company</div><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rosu Studio. All rights reserved.</span>
+        <span>Made with ❤️ by Răzvan Roșu &nbsp;·&nbsp; <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

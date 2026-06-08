@@ -1,241 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Refund Policy — Rosu Studio</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --green: #1D9E75;
-    --green-light: #E8F5F0;
-    --text: #1A2E28;
-    --text-light: #6B7C75;
-    --border: rgba(29, 158, 117, 0.15);
-    --bg: #F8FFFE;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 16px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(248, 255, 254, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-logo-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--green);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  .container {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 120px 24px 80px;
-  }
-  .page-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--green-light);
-    color: var(--green);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    border: 1px solid rgba(29,158,117,0.2);
-  }
-  h1 {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .last-updated {
-    color: var(--text-light);
-    font-size: 14px;
-    margin-bottom: 48px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 36px 0 12px;
-    color: var(--text);
-    padding-left: 16px;
-    border-left: 3px solid var(--green);
-  }
-  p { margin-bottom: 16px; color: var(--text-light); font-size: 16px; }
-  ul {
-    margin: 0 0 16px 24px;
-    color: var(--text-light);
-    font-size: 16px;
-  }
-  ul li { margin-bottom: 8px; }
-  a { color: var(--green); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .highlight-box {
-    background: var(--green-light);
-    border: 1px solid rgba(29,158,117,0.2);
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin: 24px 0;
-  }
-  .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
-  .warning-box {
-    background: #FFF8E1;
-    border: 1px solid #FFD54F;
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin: 24px 0;
-  }
-  .warning-box p { margin: 0; color: #5D4037; font-weight: 500; }
-  footer {
-    background: #0F1A16;
-    padding: 32px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .footer-links { display: flex; gap: 24px; }
-  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; }
-  .footer-links a:hover { color: var(--green); }
-  .footer-copy { color: rgba(255,255,255,0.3); font-size: 13px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Policy — Rosu Studio</title>
+  <meta name="description" content="Refund Policy for Rosu Studio apps. Learn about our refund process for in-app purchases.">
+  <link rel="canonical" href="https://rosustudio.net/refund-policy.html">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">
-    <div class="nav-logo-icon">🔥</div>
-    Rosu Studio
-  </a>
-</nav>
+  <!-- NAV -->
+  <nav class="nav nav--light" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#rLg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="rLg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+        Rosu Studio
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-toggle">Legal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
+          <ul class="nav__dropdown">
+            <li><a href="privacy-policy.html"><span class="dd-icon">🔒</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span class="dd-icon">📄</span> Terms of Service</a></li>
+            <li><a href="refund-policy.html"><span class="dd-icon">↩️</span> Refund Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a><a href="apps.html">Apps</a><a href="about.html">About</a>
+      <span class="nav__mobile-dropdown-toggle">Legal ▾</span>
+      <div class="nav__mobile-dropdown-content" style="display:none;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<div class="container">
-  <div class="page-badge">💳 Legal</div>
-  <h1>Refund Policy</h1>
-  <p class="last-updated">Last updated: May 20, 2026 · Applies to: StreakLife app</p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Legal</p>
+        <h1 class="display-lg" style="margin-top:10px; margin-bottom:14px;">Refund Policy</h1>
+        <p style="color:rgba(245,240,232,0.55); font-size:0.95rem;">Rosu Studio — rosustudio.net</p>
+      </div>
+    </section>
 
-  <div class="highlight-box">
-    <p>💚 <strong>Short version:</strong> We want you to be happy with your purchase. If something went wrong, contact us within 48 hours and we'll do our best to help. For most cases, Google Play handles refunds directly.</p>
-  </div>
+    <section class="section">
+      <div class="container">
+        <div class="legal-content">
+          <p class="legal-date">Last updated: June 8, 2026</p>
 
-  <h2>1. General Policy</h2>
-  <p>All purchases made through StreakLife are processed by Google Play Billing. As such, refunds are primarily handled through Google Play's refund system.</p>
-  <p>We offer refunds in the following circumstances:</p>
-  <ul>
-    <li>You were charged but did not receive the purchased item (e.g., Flames or premium features)</li>
-    <li>A technical error caused an unintended purchase</li>
-    <li>The purchased feature did not work as described</li>
-    <li>You were charged multiple times for the same purchase</li>
-  </ul>
+          <p>This Refund Policy applies to Rosu Studio apps available on the Google Play Store, including StreakLife. Please read this policy carefully before making any purchases.</p>
 
-  <h2>2. How to Request a Refund</h2>
-  <p><strong>Option A — Google Play (fastest):</strong></p>
-  <ul>
-    <li>Open the Google Play Store app</li>
-    <li>Tap your profile icon → "Payments & subscriptions" → "Order history"</li>
-    <li>Find the purchase and tap "Request a refund"</li>
-    <li>Follow the instructions provided by Google</li>
-  </ul>
-  <p><strong>Option B — Contact us directly:</strong></p>
-  <ul>
-    <li>Email us at <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a></li>
-    <li>Include your Google Play order number and a description of the issue</li>
-    <li>We will respond within 2 business days</li>
-  </ul>
+          <h2>1. Free Apps</h2>
 
-  <h2>3. Refund Timeframe</h2>
-  <p>Refund requests must be submitted within <strong>48 hours</strong> of the original purchase for the best chance of approval. Google Play may allow refund requests up to 48 hours after purchase automatically.</p>
-  <p>Once a refund is approved, it typically takes 3-5 business days to appear on your payment method.</p>
+          <p>StreakLife is currently <strong>free to download and use</strong>. The core features — habit tracking, streaks, XP, the leaderboard, and avatar customization — are available at no charge. There is no subscription required.</p>
 
-  <h2>4. Non-Refundable Items</h2>
-  <div class="warning-box">
-    <p>⚠️ The following are generally not eligible for refunds:</p>
-  </div>
-  <ul>
-    <li>Flames or virtual currency that have already been spent in the shop</li>
-    <li>Purchases made more than 48 hours ago (unless a technical error occurred)</li>
-    <li>Subscriptions after the current billing period has started</li>
-    <li>Accounts terminated due to Terms of Service violations</li>
-    <li>Purchases where the buyer changed their mind after use</li>
-  </ul>
+          <p>The "Flames" virtual currency in StreakLife is earned by completing habits. As of this writing, Flames are not available for direct purchase — they are earned through use of the app.</p>
 
-  <h2>5. Subscriptions</h2>
-  <p>If StreakLife offers a subscription (Premium plan):</p>
-  <ul>
-    <li>You can cancel your subscription at any time through Google Play</li>
-    <li>Cancellation takes effect at the end of the current billing period</li>
-    <li>You will retain premium access until the period ends</li>
-    <li>We do not offer partial refunds for unused subscription time</li>
-  </ul>
-  <p>To cancel: Google Play Store → Profile → Payments & subscriptions → Subscriptions → StreakLife → Cancel.</p>
+          <h2>2. In-App Purchases (If Applicable)</h2>
 
-  <h2>6. Technical Issues</h2>
-  <p>If you experience a technical issue that affected your purchase (e.g., app crash during purchase, Flames not credited), please contact us immediately at <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a> with:</p>
-  <ul>
-    <li>Your Google Play order number</li>
-    <li>Screenshot of the issue (if possible)</li>
-    <li>Description of what happened</li>
-  </ul>
-  <p>We will investigate and resolve the issue within 2 business days.</p>
+          <p>If Rosu Studio introduces optional paid features or in-app purchases in the future, this section will apply:</p>
 
-  <h2>7. Chargebacks</h2>
-  <p>If you initiate a chargeback with your bank or credit card company without first contacting us, we reserve the right to suspend your account pending investigation. We encourage you to contact us first — we are happy to resolve any issues directly.</p>
+          <h3>Google Play Refund Process</h3>
+          <p>All in-app purchases made through the Google Play Store are processed by Google. Google's standard refund policy applies: users may request a refund within <strong>48 hours</strong> of an in-app purchase directly through Google Play.</p>
 
-  <h2>8. Consumer Rights</h2>
-  <p>Nothing in this Refund Policy limits your statutory rights under applicable consumer protection laws, including EU consumer rights regulations. Romanian consumers have additional rights under Romanian consumer protection law.</p>
+          <p>To request a refund via Google Play:</p>
+          <ul>
+            <li>Open the Google Play Store app</li>
+            <li>Tap your profile icon → "Payments & subscriptions" → "Budget & history"</li>
+            <li>Find the transaction and tap "Refund"</li>
+          </ul>
 
-  <h2>9. Contact Us</h2>
-  <p>For any refund requests or questions, please contact us:</p>
-  <ul>
-    <li>Email: <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a></li>
-    <li>Response time: within 2 business days</li>
-    <li>Website: <a href="https://rosustudio.net">rosustudio.net</a></li>
-  </ul>
-</div>
+          <p>Alternatively, visit <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener">play.google.com/store/account/orderhistory</a>.</p>
 
-<footer>
-  <a href="/" class="nav-logo" style="color:white; text-decoration:none; display:flex; align-items:center; gap:10px;">
-    <div class="nav-logo-icon">🔥</div>
-    Rosu Studio
-  </a>
-  <div class="footer-links">
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms & Conditions</a>
-    <a href="/refund-policy.html">Refund Policy</a>
-  </div>
-  <div class="footer-copy">© 2026 Rosu Studio. All rights reserved.</div>
-</footer>
+          <h3>Refund Eligibility</h3>
+          <p>We support refunds for:</p>
+          <ul>
+            <li>Accidental purchases made within 48 hours</li>
+            <li>Purchases that did not deliver the promised content due to a technical error</li>
+            <li>Duplicate charges for the same purchase</li>
+          </ul>
 
+          <p>We do not offer refunds for:</p>
+          <ul>
+            <li>Purchases where virtual items have already been consumed or used</li>
+            <li>Requests made more than 14 days after purchase (unless required by law)</li>
+            <li>Dissatisfaction with the app experience after the item was delivered as described</li>
+            <li>Account suspension due to Terms of Service violations</li>
+          </ul>
+
+          <h2>3. Virtual Currency and Items</h2>
+
+          <p>Virtual currency (Flames) and virtual items within StreakLife are not refundable once they have been spent or used. If you experience a technical issue where Flames were deducted but no item was received, please contact us immediately and we will investigate and correct the issue.</p>
+
+          <p>Virtual items have no real-world monetary value and cannot be converted to cash or transferred between accounts.</p>
+
+          <h2>4. Exceptional Circumstances</h2>
+
+          <p>If you have a refund request that falls outside the standard Google Play process — for example, a genuine billing error or technical failure — please contact us directly:</p>
+
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></li>
+            <li><strong>Subject line:</strong> "Refund Request — [Your Order Number]"</li>
+          </ul>
+
+          <p>Include your Google account email, the item purchased, the purchase date, and a brief description of the issue. We aim to respond within 48 hours and resolve legitimate issues fairly.</p>
+
+          <h2>5. EU Consumer Rights</h2>
+
+          <p>If you are a consumer in the European Union, you have certain statutory rights that this policy does not override. Under EU law, you may have a 14-day right of withdrawal for digital content purchases, unless the content has been accessed or consumed after providing explicit consent and acknowledgment that the right of withdrawal is waived upon delivery.</p>
+
+          <p>For any EU consumer rights concerns, please contact us and we will ensure compliance with applicable law.</p>
+
+          <h2>6. Contact</h2>
+
+          <p>For refund-related questions or requests:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></li>
+            <li><strong>Website:</strong> <a href="contact.html">rosustudio.net/contact</a></li>
+            <li><strong>Response time:</strong> Within 48 business hours</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color:#F5F0E8;">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#rFlg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="rFlg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+            Rosu Studio
+          </a>
+          <p class="footer__tagline">Indie mobile studio crafting apps people actually love.</p>
+        </div>
+        <div><div class="footer__col-title">Apps</div><ul class="footer__links"><li><a href="streaklife.html">StreakLife</a></li><li><a href="apps.html">All Apps</a></li></ul></div>
+        <div><div class="footer__col-title">Company</div><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rosu Studio. All rights reserved.</span>
+        <span>Made with ❤️ by Răzvan Roșu &nbsp;·&nbsp; <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps — Rosu Studio</title>
+  <meta name="description" content="Discover apps made by Rosu Studio. StreakLife and more — beautifully crafted Android applications.">
+  <link rel="canonical" href="https://rosustudio.net/apps.html">
+  <meta property="og:title" content="Apps — Rosu Studio">
+  <meta property="og:description" content="Beautiful Android apps from Rosu Studio.">
+  <meta property="og:url" content="https://rosustudio.net/apps.html">
+  <meta property="og:image" content="https://rosustudio.net/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 56px;
+    }
+
+    .app-card {
+      background: var(--oat);
+      border-radius: var(--r-xl);
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 10px 10px 24px var(--nm-dark), -10px -10px 24px var(--nm-light);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 16px 16px 36px var(--nm-dark), -16px -16px 36px var(--nm-light);
+    }
+
+    .app-card__accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--caramel), var(--terracotta));
+    }
+
+    .app-card__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(196,149,106,0.30);
+    }
+
+    .app-card__name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .app-card__category {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 14px;
+    }
+
+    .app-card__desc {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .app-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .app-tag {
+      padding: 4px 11px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(196,149,106,0.1);
+      color: var(--caramel);
+      border: 1px solid rgba(196,149,106,0.25);
+    }
+
+    .app-card__actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .app-card--coming {
+      opacity: 0.72;
+    }
+
+    .coming-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(196,149,106,0.12);
+      border: 1px solid rgba(196,149,106,0.25);
+      color: var(--caramel);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--light" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#lg1)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+        Rosu Studio
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-toggle">Legal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
+          <ul class="nav__dropdown">
+            <li><a href="privacy-policy.html"><span class="dd-icon">🔒</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span class="dd-icon">📄</span> Terms of Service</a></li>
+            <li><a href="refund-policy.html"><span class="dd-icon">↩️</span> Refund Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn--primary nav__cta desktop-only" style="padding:10px 20px;font-size:0.85rem;">Get in Touch</a>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Apps</a>
+      <a href="about.html">About</a>
+      <span class="nav__mobile-dropdown-toggle">Legal ▾</span>
+      <div class="nav__mobile-dropdown-content" style="display:none;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Our Work</p>
+        <h1 class="display-lg" style="margin-top:10px; margin-bottom:14px;">Apps we're proud of.</h1>
+        <p style="color:rgba(245,240,232,0.60); max-width:500px; margin-inline:auto; font-size:1.05rem;">
+          Small studio, big ambitions. Every app we ship is designed with care, built to last, and free to try.
+        </p>
+      </div>
+    </section>
+
+    <!-- Apps Grid -->
+    <section class="section section--dim">
+      <div class="container">
+        <div class="apps-grid">
+
+          <!-- StreakLife -->
+          <article class="app-card reveal">
+            <div class="app-card__accent"></div>
+            <div class="app-card__icon" style="background: linear-gradient(135deg,#1A2920,#111D15);">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 5C20 5 11 16 11 24C11 28.97 15.03 33 20 33C24.97 33 29 28.97 29 24C29 16 20 5 20 5Z" fill="#F5F0E8"/><path d="M20 14C20 14 16 20 16 24.5C16 26.99 17.79 29 20 29C22.21 29 24 26.99 24 24.5C24 20 20 14 20 14Z" fill="#D4845A"/></svg>
+            </div>
+            <div class="app-card__name">StreakLife</div>
+            <div class="app-card__category">Habit Tracker · Lifestyle RPG</div>
+            <p class="app-card__desc">
+              Build powerful habits through streaks, XP, and avatar customization. The habit tracker that turns discipline into an adventure — free, no subscriptions.
+            </p>
+            <div class="app-card__tags">
+              <span class="app-tag">Free</span>
+              <span class="app-tag">Android</span>
+              <span class="app-tag">Firebase</span>
+              <span class="app-tag">Neumorphic UI</span>
+            </div>
+            <div class="app-card__actions">
+              <a href="streaklife.html" class="btn btn--primary" style="flex:1; justify-content:center;">Learn More</a>
+              <a href="https://play.google.com/store" target="_blank" rel="noopener" class="btn btn--outline" style="padding:12px 16px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5L14 12 3 3.5V20.5Z"/></svg>
+                Play
+              </a>
+            </div>
+          </article>
+
+          <!-- More apps — coming soon -->
+          <article class="app-card app-card--coming reveal" data-delay="120">
+            <div class="coming-badge">Coming Soon</div>
+            <div class="app-card__icon" style="background: linear-gradient(135deg,#2A1D35,#1A1028);">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="7" fill="#F5F0E8" opacity="0.9"/><path d="M6 33C6 25.82 12.27 20 20 20C27.73 20 34 25.82 34 33" stroke="#F5F0E8" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/></svg>
+            </div>
+            <div class="app-card__name">Project TBA</div>
+            <div class="app-card__category">New App · 2026</div>
+            <p class="app-card__desc">
+              Something new is in the works. We're crafting the next app with the same care and attention that went into StreakLife. Stay tuned.
+            </p>
+            <div class="app-card__tags">
+              <span class="app-tag">Android</span>
+              <span class="app-tag">Free</span>
+            </div>
+            <div class="app-card__actions">
+              <a href="contact.html" class="btn btn--outline" style="flex:1; justify-content:center;">Get Notified</a>
+            </div>
+          </article>
+
+          <article class="app-card app-card--coming reveal" data-delay="240">
+            <div class="coming-badge">Coming Soon</div>
+            <div class="app-card__icon" style="background: linear-gradient(135deg,#1D2A35,#101820);">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="10" height="10" rx="3" fill="#F5F0E8" opacity="0.9"/><rect x="22" y="8" width="10" height="10" rx="3" fill="#F5F0E8" opacity="0.5"/><rect x="8" y="22" width="10" height="10" rx="3" fill="#F5F0E8" opacity="0.5"/><rect x="22" y="22" width="10" height="10" rx="3" fill="#F5F0E8" opacity="0.25"/></svg>
+            </div>
+            <div class="app-card__name">Project TBA</div>
+            <div class="app-card__category">Productivity · 2026</div>
+            <p class="app-card__desc">
+              Another idea, another app. The Rosu Studio pipeline is full. We believe every great tool starts with a problem worth solving.
+            </p>
+            <div class="app-card__tags">
+              <span class="app-tag">Android</span>
+              <span class="app-tag">Free</span>
+            </div>
+            <div class="app-card__actions">
+              <a href="contact.html" class="btn btn--outline" style="flex:1; justify-content:center;">Get Notified</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align:center; margin-top:72px;" class="reveal">
+          <p style="color:var(--text-muted); margin-bottom:20px; font-size:1rem;">Have an idea you'd like to see built?</p>
+          <a href="contact.html" class="btn btn--primary">Talk to Us →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color:#F5F0E8;">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#flg2)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="flg2" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+            Rosu Studio
+          </a>
+          <p class="footer__tagline">Indie mobile studio crafting apps people actually love.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Apps</div>
+          <ul class="footer__links"><li><a href="streaklife.html">StreakLife</a></li><li><a href="apps.html">All Apps</a></li></ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Legal</div>
+          <ul class="footer__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rosu Studio. All rights reserved.</span>
+        <span>Made with ❤️ by Răzvan Roșu &nbsp;·&nbsp; <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

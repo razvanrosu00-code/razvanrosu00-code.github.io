@@ -1,230 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Rosu Studio</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --green: #1D9E75;
-    --green-light: #E8F5F0;
-    --text: #1A2E28;
-    --text-light: #6B7C75;
-    --border: rgba(29, 158, 117, 0.15);
-    --bg: #F8FFFE;
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 16px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(248, 255, 254, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-logo-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--green);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  .container {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 120px 24px 80px;
-  }
-  .page-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--green-light);
-    color: var(--green);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    border: 1px solid rgba(29,158,117,0.2);
-  }
-  h1 {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .last-updated {
-    color: var(--text-light);
-    font-size: 14px;
-    margin-bottom: 48px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 36px 0 12px;
-    color: var(--text);
-    padding-left: 16px;
-    border-left: 3px solid var(--green);
-  }
-  p { margin-bottom: 16px; color: var(--text-light); font-size: 16px; }
-  ul {
-    margin: 0 0 16px 24px;
-    color: var(--text-light);
-    font-size: 16px;
-  }
-  ul li { margin-bottom: 8px; }
-  a { color: var(--green); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .highlight-box {
-    background: var(--green-light);
-    border: 1px solid rgba(29,158,117,0.2);
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin: 24px 0;
-  }
-  .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
-  footer {
-    background: #0F1A16;
-    padding: 32px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .footer-links { display: flex; gap: 24px; }
-  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 14px; }
-  .footer-links a:hover { color: var(--green); }
-  .footer-copy { color: rgba(255,255,255,0.3); font-size: 13px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Rosu Studio</title>
+  <meta name="description" content="Privacy Policy for Rosu Studio apps including StreakLife. We take your privacy seriously.">
+  <link rel="canonical" href="https://rosustudio.net/privacy-policy.html">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="/" class="nav-logo">
-    <div class="nav-logo-icon">🔥</div>
-    Rosu Studio
-  </a>
-</nav>
+  <!-- NAV -->
+  <nav class="nav nav--light" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#ppLg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="ppLg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+        Rosu Studio
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-toggle">Legal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
+          <ul class="nav__dropdown">
+            <li><a href="privacy-policy.html"><span class="dd-icon">🔒</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span class="dd-icon">📄</span> Terms of Service</a></li>
+            <li><a href="refund-policy.html"><span class="dd-icon">↩️</span> Refund Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a><a href="apps.html">Apps</a><a href="about.html">About</a>
+      <span class="nav__mobile-dropdown-toggle">Legal ▾</span>
+      <div class="nav__mobile-dropdown-content" style="display:none;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<div class="container">
-  <div class="page-badge">🔒 Legal</div>
-  <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: May 20, 2026 · Applies to: StreakLife app</p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Legal</p>
+        <h1 class="display-lg" style="margin-top:10px; margin-bottom:14px;">Privacy Policy</h1>
+        <p style="color:rgba(245,240,232,0.55); font-size:0.95rem;">Rosu Studio — rosustudio.net</p>
+      </div>
+    </section>
 
-  <div class="highlight-box">
-    <p>🌱 <strong>Short version:</strong> We collect only what's necessary to make the app work. We never sell your data. If you use the app without an account, nothing leaves your device.</p>
-  </div>
+    <section class="section">
+      <div class="container">
+        <div class="legal-content">
+          <p class="legal-date">Last updated: June 8, 2026</p>
 
-  <h2>1. Who We Are</h2>
-  <p>Rosu Studio is an independent app development studio operated by Razvan Rosu, based in Romania. We build mobile applications for Android.</p>
-  <p>Contact: <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a></p>
+          <p>Rosu Studio ("we", "our", or "us") operates the rosustudio.net website and the StreakLife mobile application (the "Service"). This Privacy Policy explains how we collect, use, and protect your information when you use our Service.</p>
 
-  <h2>2. What We Collect</h2>
-  <p>Depending on how you use the app, we may collect:</p>
-  <ul>
-    <li><strong>Account information</strong> — If you sign in with Google, we receive your name and email address from Google.</li>
-    <li><strong>Usage data</strong> — Anonymous analytics about how you use the app (screens visited, features used) via Google Firebase Analytics.</li>
-    <li><strong>Habit & progress data</strong> — Your habits, streaks, XP, Flames, and avatar configuration.</li>
-    <li><strong>Advertising ID</strong> — Firebase Analytics may use your device's Advertising ID for analytics purposes.</li>
-    <li><strong>Device information</strong> — Basic device data (OS version, device model) for crash reporting and compatibility.</li>
-  </ul>
+          <p>By using the Service, you agree to the collection and use of information in accordance with this policy. We take your privacy seriously and are committed to being transparent about our data practices.</p>
 
-  <h2>3. How We Use Your Data</h2>
-  <ul>
-    <li>To provide and improve the app experience</li>
-    <li>To save and sync your progress across devices (if signed in)</li>
-    <li>To display your username and rank on the leaderboard (if signed in)</li>
-    <li>To send push notifications (only if you grant permission)</li>
-    <li>To analyze app usage and fix bugs</li>
-    <li>To process in-app purchases (when available)</li>
-  </ul>
+          <h2>1. Information We Collect</h2>
 
-  <h2>4. Data Storage</h2>
-  <p><strong>Without an account:</strong> All your data is stored locally on your device only. Nothing is sent to our servers.</p>
-  <p><strong>With a Google account:</strong> Your progress is stored securely in Firebase Firestore, hosted on Google's servers in accordance with Google's data protection standards.</p>
+          <h3>Information you provide directly</h3>
+          <ul>
+            <li><strong>Account information:</strong> When you sign in with Google, we receive your name and email address from Google to create and identify your account.</li>
+            <li><strong>Habit data:</strong> Habits you create, completion logs, streaks, and other data you enter into StreakLife.</li>
+            <li><strong>Contact messages:</strong> If you contact us via our website form or email, we store your name, email, and message content to respond to you.</li>
+          </ul>
 
-  <h2>5. Third-Party Services</h2>
-  <p>We use the following third-party services:</p>
-  <ul>
-    <li><strong>Google Firebase</strong> — Authentication, database, analytics, and crash reporting. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-    <li><strong>Google Sign-In</strong> — Account authentication. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-    <li><strong>Google Play Billing</strong> — In-app purchases (when available).</li>
-    <li><strong>Google AdMob</strong> — Advertising (when available). <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-  </ul>
+          <h3>Information collected automatically</h3>
+          <ul>
+            <li><strong>Usage data:</strong> Basic app usage analytics to understand which features are used. This is aggregate, non-personally-identifiable data.</li>
+            <li><strong>Device information:</strong> Device type, operating system version, and app version for crash reporting and compatibility purposes.</li>
+          </ul>
 
-  <h2>6. Data Sharing</h2>
-  <p>We do not sell, rent, or trade your personal data to third parties.</p>
-  <p>Data may be shared with Google as part of Firebase, Google Sign-In, and AdMob services as described above. Your username and rank may be visible to other users on the public leaderboard.</p>
+          <h3>Information we do NOT collect</h3>
+          <ul>
+            <li>We do not collect or store your Google account password.</li>
+            <li>We do not use advertising networks or third-party tracking pixels.</li>
+            <li>We do not collect precise location data.</li>
+            <li>We do not sell your data to any third party.</li>
+          </ul>
 
-  <h2>7. Your Rights (GDPR)</h2>
-  <p>If you are located in the European Union, you have the following rights:</p>
-  <ul>
-    <li><strong>Access</strong> — Request a copy of your personal data</li>
-    <li><strong>Rectification</strong> — Request correction of inaccurate data</li>
-    <li><strong>Erasure</strong> — Request deletion of your account and data</li>
-    <li><strong>Portability</strong> — Request your data in a portable format</li>
-    <li><strong>Objection</strong> — Object to certain processing activities</li>
-  </ul>
-  <p>To exercise any of these rights, contact us at <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a>. We will respond within 30 days.</p>
+          <h2>2. How We Use Your Information</h2>
 
-  <h2>8. Account Deletion</h2>
-  <p>You can delete your account and all associated data at any time by contacting us at <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a>. We will process your request within 7 business days.</p>
+          <p>We use the information we collect solely to:</p>
+          <ul>
+            <li>Provide, maintain, and improve the Service</li>
+            <li>Authenticate your account and keep your data secure</li>
+            <li>Sync your habit data across devices via Firebase</li>
+            <li>Respond to your support requests and messages</li>
+            <li>Understand app usage to improve features and fix bugs</li>
+            <li>Maintain the leaderboard feature (your display username and XP total are visible to other users)</li>
+          </ul>
 
-  <h2>9. Children's Privacy</h2>
-  <p>StreakLife is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+          <h2>3. Data Storage and Security</h2>
 
-  <h2>10. Push Notifications</h2>
-  <p>We may send push notifications to remind you to complete your daily habits. You can disable notifications at any time through your device settings.</p>
+          <p>Your habit data is stored securely in Google Firebase Firestore, a cloud database provided by Google. Firebase encrypts data in transit (TLS) and at rest. Access is controlled by Firebase Security Rules that restrict data access to the authenticated account owner.</p>
 
-  <h2>11. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+          <p>We take reasonable technical measures to protect your information, but no system is completely secure. If you become aware of any security issue, please contact us immediately at <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a>.</p>
 
-  <h2>12. Contact Us</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us:</p>
-  <ul>
-    <li>Email: <a href="mailto:razvanrosu00@gmail.com">razvanrosu00@gmail.com</a></li>
-    <li>Website: <a href="https://rosustudio.net">rosustudio.net</a></li>
-  </ul>
-</div>
+          <h2>4. Third-Party Services</h2>
 
-<footer>
-  <a href="/" class="nav-logo" style="color:white; text-decoration:none; display:flex; align-items:center; gap:10px;">
-    <div class="nav-logo-icon">🔥</div>
-    Rosu Studio
-  </a>
-  <div class="footer-links">
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms & Conditions</a>
-    <a href="/refund-policy.html">Refund Policy</a>
-  </div>
-  <div class="footer-copy">© 2026 Rosu Studio. All rights reserved.</div>
-</footer>
+          <p>StreakLife uses the following third-party services, each with their own privacy policies:</p>
+          <ul>
+            <li><strong>Google Firebase</strong> (database, authentication) — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></li>
+            <li><strong>Google Sign-In</strong> (authentication) — governed by Google's Privacy Policy</li>
+          </ul>
 
+          <p>Our website may use Google Fonts, which requests fonts from Google's servers. This involves your IP address being sent to Google. For full GDPR compliance, consider using a browser extension to block Google Fonts requests.</p>
+
+          <h2>5. Leaderboard and Public Data</h2>
+
+          <p>If you participate in StreakLife's leaderboard, your chosen display username and XP total are visible to other users of the app. Your full name, email address, and habit details are never shared publicly. You may opt out of the leaderboard at any time by contacting us.</p>
+
+          <h2>6. Children's Privacy</h2>
+
+          <p>Our Service is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will delete it promptly. If you are a parent or guardian and believe your child has used our Service, please contact us.</p>
+
+          <h2>7. Your Rights (GDPR — EU/EEA Users)</h2>
+
+          <p>If you are located in the European Union or European Economic Area, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+          <ul>
+            <li><strong>Right of access:</strong> Request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to rectification:</strong> Request correction of inaccurate data.</li>
+            <li><strong>Right to erasure ("right to be forgotten"):</strong> Request deletion of your personal data.</li>
+            <li><strong>Right to data portability:</strong> Request your data in a machine-readable format.</li>
+            <li><strong>Right to object:</strong> Object to processing of your personal data.</li>
+            <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any time.</li>
+          </ul>
+
+          <p>To exercise any of these rights, contact us at <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a>. We will respond within 30 days.</p>
+
+          <p>The legal basis for processing your data is <strong>performance of a contract</strong> (providing the app service you signed up for) and <strong>legitimate interest</strong> (improving the service and preventing abuse).</p>
+
+          <h2>8. Data Retention</h2>
+
+          <p>We retain your account data for as long as your account is active, or as needed to provide the Service. If you delete your account, we will delete your personal data within 30 days, except where retention is required by law.</p>
+
+          <h2>9. International Data Transfers</h2>
+
+          <p>Your data is stored on Google Firebase servers, which may be located outside your country of residence, including outside the EU/EEA. Google provides appropriate safeguards for international data transfers as required by GDPR (Standard Contractual Clauses).</p>
+
+          <h2>10. Changes to This Policy</h2>
+
+          <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+
+          <h2>11. Contact Us</h2>
+
+          <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></li>
+            <li><strong>Website:</strong> <a href="contact.html">rosustudio.net/contact</a></li>
+            <li><strong>Location:</strong> Romania, European Union</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color:#F5F0E8;">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#ppFlg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="ppFlg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+            Rosu Studio
+          </a>
+          <p class="footer__tagline">Indie mobile studio crafting apps people actually love.</p>
+        </div>
+        <div><div class="footer__col-title">Apps</div><ul class="footer__links"><li><a href="streaklife.html">StreakLife</a></li><li><a href="apps.html">All Apps</a></li></ul></div>
+        <div><div class="footer__col-title">Company</div><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rosu Studio. All rights reserved.</span>
+        <span>Made with ❤️ by Răzvan Roșu &nbsp;·&nbsp; <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

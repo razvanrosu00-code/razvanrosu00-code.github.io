@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 160" width="680" height="160">
+  <defs>
+    <linearGradient id="wbgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4956A"/>
+      <stop offset="100%" stop-color="#D4845A"/>
+    </linearGradient>
+    <linearGradient id="winnerGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#D4845A" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#C4956A" stop-opacity="0.15"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C4956A"/>
+      <stop offset="100%" stop-color="#D4845A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon background -->
+  <rect x="0" y="8" width="144" height="144" rx="32" ry="32" fill="url(#wbgGrad)"/>
+  <rect x="0" y="8" width="144" height="144" rx="32" ry="32" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Outer flame -->
+  <path d="
+    M72 26
+    C72 26 36 72 36 104
+    C36 127 52 144 72 144
+    C92 144 108 127 108 104
+    C108 72 72 26 72 26 Z
+  " fill="white" opacity="0.95"/>
+
+  <!-- Inner flame -->
+  <path d="
+    M72 64
+    C72 64 54 90 54 107
+    C54 119 62 128 72 128
+    C82 128 90 119 90 107
+    C90 90 72 64 72 64 Z
+  " fill="url(#winnerGrad)"/>
+
+  <!-- Studio name -->
+  <text
+    x="176"
+    y="88"
+    font-family="'Nunito', 'Inter', system-ui, sans-serif"
+    font-size="62"
+    font-weight="800"
+    letter-spacing="-1.5"
+    fill="url(#textGrad)"
+  >Rosu Studio</text>
+
+  <!-- Tagline -->
+  <text
+    x="178"
+    y="120"
+    font-family="'Inter', system-ui, sans-serif"
+    font-size="22"
+    font-weight="500"
+    letter-spacing="1.5"
+    fill="#7A6A5A"
+  >INDIE MOBILE STUDIO</text>
+</svg>

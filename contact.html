@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Rosu Studio</title>
+  <meta name="description" content="Get in touch with Rosu Studio. Bug reports, feature requests, partnership inquiries, or just a hello — we read every message.">
+  <link rel="canonical" href="https://rosustudio.net/contact.html">
+  <meta property="og:title" content="Contact Rosu Studio">
+  <meta property="og:description" content="Bug reports, feature requests, partnerships — get in touch.">
+  <meta property="og:url" content="https://rosustudio.net/contact.html">
+  <meta property="og:image" content="https://rosustudio.net/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--dark);
+      border-radius: var(--r-xl);
+      padding: 40px;
+      color: #F5F0E8;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .contact-method:last-child { border-bottom: none; }
+
+    .cm-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(196,149,106,0.12);
+      border: 1px solid rgba(196,149,106,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .cm-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .cm-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(245,240,232,0.85);
+    }
+
+    .cm-value a {
+      color: rgba(245,240,232,0.85);
+      transition: color 0.2s;
+    }
+
+    .cm-value a:hover { color: #fff; }
+
+    .form-card {
+      background: var(--oat);
+      border-radius: var(--r-xl);
+      padding: 48px 44px;
+      box-shadow: 12px 12px 32px var(--nm-dark), -12px -12px 32px var(--nm-light);
+    }
+
+    @media (max-width: 860px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-card { padding: 36px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--light" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#ctLg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="ctLg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+        Rosu Studio
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apps.html">Apps</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav__dropdown-wrap">
+          <button class="nav__dropdown-toggle">Legal <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></button>
+          <ul class="nav__dropdown">
+            <li><a href="privacy-policy.html"><span class="dd-icon">🔒</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span class="dd-icon">📄</span> Terms of Service</a></li>
+            <li><a href="refund-policy.html"><span class="dd-icon">↩️</span> Refund Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a><a href="apps.html">Apps</a><a href="about.html">About</a>
+      <span class="nav__mobile-dropdown-toggle">Legal ▾</span>
+      <div class="nav__mobile-dropdown-content" style="display:none;">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Say hello</p>
+        <h1 class="display-lg" style="margin-top:10px; margin-bottom:14px;">Get in touch.</h1>
+        <p style="color:rgba(245,240,232,0.60); max-width:480px; margin-inline:auto; font-size:1rem;">
+          Bug reports, feature ideas, partnerships, or just a hello. We read every message and reply within 48 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact body -->
+    <section class="section section--dim">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Info panel -->
+          <div class="contact-info-card reveal reveal--left">
+            <h2 class="display-sm" style="margin-bottom:8px; color:#F5F0E8;">Contact info</h2>
+            <p style="font-size:0.9rem; color:rgba(245,240,232,0.55); margin-bottom:28px; line-height:1.6;">
+              One-person studio, so you talk directly to the person building the apps.
+            </p>
+
+            <div class="contact-method">
+              <div class="cm-icon">📧</div>
+              <div>
+                <div class="cm-label">Email</div>
+                <div class="cm-value"><a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="cm-icon">📱</div>
+              <div>
+                <div class="cm-label">App support</div>
+                <div class="cm-value"><a href="mailto:support@rosustudio.net">support@rosustudio.net</a></div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="cm-icon">⏱️</div>
+              <div>
+                <div class="cm-label">Response time</div>
+                <div class="cm-value">Within 48 hours</div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="cm-icon">📍</div>
+              <div>
+                <div class="cm-label">Location</div>
+                <div class="cm-value">Romania, EU</div>
+              </div>
+            </div>
+
+            <div style="margin-top:32px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);">
+              <div style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Quick links</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <a href="privacy-policy.html" style="font-size:0.9rem;color:rgba(245,240,232,0.65);display:flex;align-items:center;gap:8px;transition:color 0.2s;" onmouseover="this.style.color='rgba(245,240,232,0.95)'" onmouseout="this.style.color='rgba(245,240,232,0.65)'">🔒 Privacy Policy</a>
+                <a href="terms.html" style="font-size:0.9rem;color:rgba(245,240,232,0.65);display:flex;align-items:center;gap:8px;transition:color 0.2s;" onmouseover="this.style.color='rgba(245,240,232,0.95)'" onmouseout="this.style.color='rgba(245,240,232,0.65)'">📄 Terms of Service</a>
+                <a href="refund-policy.html" style="font-size:0.9rem;color:rgba(245,240,232,0.65);display:flex;align-items:center;gap:8px;transition:color 0.2s;" onmouseover="this.style.color='rgba(245,240,232,0.95)'" onmouseout="this.style.color='rgba(245,240,232,0.65)'">↩️ Refund Policy</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="form-card reveal reveal--right">
+            <h2 class="display-sm" style="margin-bottom:6px;">Send a message</h2>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:32px;">All fields are required. We'll get back to you ASAP.</p>
+
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms access key — replace with your actual key from web3forms.com -->
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New message from rosustudio.net">
+              <input type="hidden" name="from_name" value="Rosu Studio Website">
+              <!-- Honeypot -->
+              <input type="text" name="_honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="form-group">
+                  <label class="form-label" for="field-name">Name</label>
+                  <input class="form-input" type="text" id="field-name" name="name" placeholder="Your name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="field-email">Email</label>
+                  <input class="form-input" type="email" id="field-email" name="email" placeholder="your@email.com" required autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-subject">Subject</label>
+                <select class="form-select form-input" id="field-subject" name="topic" required>
+                  <option value="" disabled selected>Select a topic…</option>
+                  <option value="Bug report">🐛 Bug report</option>
+                  <option value="Feature request">💡 Feature request</option>
+                  <option value="StreakLife support">📱 StreakLife support</option>
+                  <option value="Partnership">🤝 Partnership / collaboration</option>
+                  <option value="Press inquiry">📰 Press inquiry</option>
+                  <option value="Other">💬 Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="field-msg">Message</label>
+                <textarea class="form-textarea" id="field-msg" name="message" placeholder="Describe your question or feedback in as much detail as you like…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center; padding:15px;">
+                Send Message →
+              </button>
+
+              <div id="form-status" class="form-status" role="alert"></div>
+
+              <p style="font-size:0.78rem; color:var(--text-light); text-align:center; margin-top:14px; line-height:1.5;">
+                Your data is never sold or shared. See our <a href="privacy-policy.html" style="color:var(--caramel);">Privacy Policy</a>.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="color:#F5F0E8;">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#ctFlg)"/><path d="M20 7C20 7 13 15.5 13 22.5C13 26.6 16.1 30 20 30C23.9 30 27 26.6 27 22.5C27 15.5 20 7 20 7Z" fill="white" opacity="0.95"/><path d="M20 15C20 15 16.5 20.5 16.5 23.8C16.5 25.7 18.1 27.2 20 27.2C21.9 27.2 23.5 25.7 23.5 23.8C23.5 20.5 20 15 20 15Z" fill="#D4845A"/><defs><linearGradient id="ctFlg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#C4956A"/><stop offset="1" stop-color="#D4845A"/></linearGradient></defs></svg>
+            Rosu Studio
+          </a>
+          <p class="footer__tagline">Indie mobile studio crafting apps people actually love.</p>
+        </div>
+        <div><div class="footer__col-title">Apps</div><ul class="footer__links"><li><a href="streaklife.html">StreakLife</a></li><li><a href="apps.html">All Apps</a></li></ul></div>
+        <div><div class="footer__col-title">Company</div><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><div class="footer__col-title">Legal</div><ul class="footer__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rosu Studio. All rights reserved.</span>
+        <span>Made with ❤️ by Răzvan Roșu &nbsp;·&nbsp; <a href="mailto:contact@rosustudio.net">contact@rosustudio.net</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
